@@ -98,8 +98,8 @@ h2 {
 
 h3 {
 	font-size: 20px;
-	font-weight: 400;
-	line-height: 1.4;
+	font-weight: 300;
+	line-height: 1.5;
 	text-align: center;
 }
 
@@ -156,14 +156,57 @@ a {
 		}
 
 		100% {
-			transform: scale(1.6);
+			transform: scale(1.8);
 
 		}
 	}
 
+	//title
+	.kv-title {
+		position: absolute;
+		top: 60%;
+		left: 50%;
+		width: 680px;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		&::before {
+			position: absolute;
+			left: 0;
+			top: 18px;
+			display: inline-block;
+			content: url(../images/deco-l.svg);
+			width: 30px;
+		}
+		&::after {
+			position: absolute;
+			right: 0;
+			top: 18px;
+			display: inline-block;
+			content: url(../images/deco-r.svg);
+			width: 30px;
+		}
+		h1 {
+			font-size: 80px;
+			font-weight: 800;
+			color: #fff;
+			margin-bottom: 20px;
+    		line-height: 1;
+			display: inline-block;
+			text-shadow: 0 0 15px rgb(0,0,0 / 60%);
+		}
+		h4 {
+			font-size: 36px;
+			color: $color-second;
+			letter-spacing: 3px;
+			text-indent: 3px;
+			display: inline-block;
+			text-shadow: 0 0 15px rgb(0,0,0 / 60%);
+		}
+	}
+
 	//scroll
-	$line-height: 80px;
-	$line-height-abs: -80px;
+	$line-height: 70px;
+	$line-height-abs: -70px;
 
 	.scroll-indicator {
 		position: absolute;
@@ -176,12 +219,11 @@ a {
 			background-color: #ccc;
 			position: relative;
 			overflow: hidden;
-
 			.scroll-line {
 				width: 100%;
 				height: 100%;
 				display: block;
-				background: linear-gradient(to bottom, rgba(4, 15, 48, 1) 50%, rgba(4, 15, 48, 0) 50%);
+				background: linear-gradient(to bottom, rgb(87, 87, 87) 50%, rgba(120, 120, 120, 0) 50%);
 				background-position: 0 $line-height-abs;
 				background-size: 100% 200%;
 				animation: scrolldown 2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
@@ -193,6 +235,8 @@ a {
 			right: -55px;
 			top: 0;
 			letter-spacing: 1px;
+			color: #ccc;
+			font-size: 14px;
 		}
 	}
 
@@ -211,6 +255,15 @@ a {
 	}
 }
 
+//chart
+.section-chart {
+	h2 {
+		color: $color-primary;
+	}
+	.chart {
+		margin: 50px auto;
+	}
+}
 
 
 //article
@@ -219,39 +272,43 @@ a {
 	background-size: content;
 	color: #fff;
 
-	a {
-		color: #fff;
-		margin: 20px auto;
-
-		h5 {
-			color: $color-second;
-			text-align: center;
-			font-size: 15px;
-			font-weight: 600;
-		}
-
-		h3 {
-			opacity: .8;
-			transition: .2s;
-		}
-
-		img {
-			display: block;
-			width: 100%;
-			margin-bottom: 20px;
-			filter: grayscale(20%);
-			transition: .2s;
-		}
-
-		&:hover {
-			img {
-				filter: grayscale(0%);
+	.article-item {
+		padding:0 20px;
+		a {
+			color: #fff;
+			margin: 20px auto;
+	
+			h5 {
+				color: $color-second;
+				text-align: center;
+				font-size: 15px;
+				font-weight: 600;
+				line-height: 1.5;
+			}
+	
+			h3 {
+				opacity: .8;
 				transition: .2s;
 			}
-
-			h3 {
-				opacity: 1;
+	
+			img {
+				display: block;
+				width: 100%;
+				margin-bottom: 20px;
+				filter: grayscale(20%);
 				transition: .2s;
+			}
+	
+			&:hover {
+				img {
+					filter: grayscale(0%);
+					transition: .2s;
+				}
+	
+				h3 {
+					opacity: 1;
+					transition: .2s;
+				}
 			}
 		}
 	}
@@ -262,15 +319,40 @@ a {
 .section-info {
 	background: url(../images/bg.jpg) center no-repeat;
 	background-size: content;
+	color: #fff;
+	// a {
+	// 	display: inline-block;
+	// 	color: #fff;
+	// 	background-color: $color-primary;
+	// 	border-radius: 12px;
+	// 	.more {
+	// 		margin:10px 30px;
+	// 	}
+	// }
 
-	h2 {
-		color: #fff;
+	.more {
+		text-align: center;
+		margin-top: 30px;
+		a {
+			background-color: $color-primary;
+			border-radius: 12px;
+			display: inline-block;
+			color: #fff;
+			padding:10px 60px;
+			letter-spacing: 3px;
+			text-indent: 3px;
+			position: relative;
+			&::after {
+				display: inline-block;
+				content: url(../images/point.svg);
+				width: 50px;
+				position: absolute;
+				right: -20px;
+				top:0px;
+			}
+		}
 	}
 
-	img {
-		display: block;
-		width: 100%;
-	}
 }
 
 
