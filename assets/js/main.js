@@ -26,38 +26,6 @@ $('a.smooth-scroll[href*="#"]:not([href="#"])').click(function () {
 $(window).scroll(function () {
     //fix show/hide 
     let scroll = $(this).scrollTop();
-    let examTop = $('#exam').offset().top;
-
-    if ( scroll > examTop) {
-        $('#fix-right').show(500);
-    } else {
-        $('#fix-right').hide(500);
-    }
-
-    //cerebrity show/hide 
-    let cerebrity1Top = $('#cerebrity-1').offset().top - (height / 2);
-    let cerebrity2Top = $('#cerebrity-2').offset().top - (height / 2);
-    let cerebrity3Top = $('#cerebrity-3').offset().top - (height / 2);
-    let videoTop = $('#video').offset().top - height - 50;
-
-    if ( width < 768 && scroll > cerebrity1Top && scroll <= videoTop ) {
-      $('.side-nav').fadeIn();
-      $('.fix-right').addClass('scroll');
-    } else if ( width < 768 ) {
-      $('.side-nav').fadeOut();
-      $('.fix-right').removeClass('scroll');
-    }
-
-    if ( scroll > cerebrity1Top && scroll <= cerebrity2Top ) {
-      $('.side-nav li').removeClass('active');
-      $('.side-nav li').eq(0).addClass('active');
-    } else if ( scroll > cerebrity2Top && scroll <= cerebrity3Top ) {
-      $('.side-nav li').removeClass('active');
-      $('.side-nav li').eq(1).addClass('active');
-    } else if ( scroll > cerebrity3Top ) {
-      $('.side-nav li').removeClass('active');
-      $('.side-nav li').eq(2).addClass('active');
-    }
 });
 
 //fix click none

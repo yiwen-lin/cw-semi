@@ -125,7 +125,53 @@
             <p>半導體製造業在數十年間跨越了幾次技術革新，經歷幾次興衰起落。面對全球晶片需求增長，加上高階設備投資，全球晶圓廠設備年年攀升。</p>
             <p>最新一季全球晶圓廠預測報告(World Fab Forecast)中指出，2022年全球前端晶圓廠設備支出總額將較前一年成長20%，來到1,090億美元的歷史新高，繼 2021年成長
               42%之後，已連續三年大漲。</p>
-            <div class="chart"><img src="/assets/images/chart.svg" alt=""></div>
+            <div class="chart" data-aos="fade-up" data-aos-duration="1500">
+              <div class="chart-x-axis">
+                <div class="label">2019</div>
+                <div class="label">2020</div>
+                <div class="label">2021</div>
+                <div class="label">2022</div>
+                <div class="label">2023</div>
+              </div>
+              <div class="chart-y-axis-unit">美元/Billion</div>
+              <div class="chart-y-axis">
+                <div class="label">0K</div>
+                <div class="label">50K</div>
+                <div class="label">100K</div>
+              </div>
+              <div class="chart-bar-group">
+                <div class="chart-bar chart-bar-2019">
+                  <div class="bar">
+                    <div class="text">US $55</div>
+                  </div>
+                </div>
+                <div class="chart-bar chart-bar-2020">
+                  <div class="bar">
+                    <div class="text">US $65</div>
+                  </div>
+                </div>
+                <div class="chart-bar chart-bar-2021">
+                  <div class="bar">
+                    <div class="text">US $91</div>
+                  </div>
+                </div>
+                <div class="chart-bar chart-bar-2022">
+                  <div class="bar">
+                    <div class="text">US $109</div>
+                  </div>
+                </div>
+                <div class="chart-bar chart-bar-2023">
+                  <div class="bar">
+                    <div class="text">US $109</div>
+                  </div>
+                </div>
+              </div>
+              <div class="chart-y-axis-lineup">
+                <div class="text">
+                  <b>1000</b>億<br/>美元
+                </div>
+              </div>
+            </div>
             <h6>2022 Q2 晶圓廠設備支出報告，資料來源: SEMI全球晶圓廠預測報告(World Fab Forecast)</h6>
           </div>
         </div>
@@ -314,6 +360,22 @@
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 2000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+      ]
     });
   </script>
 
