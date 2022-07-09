@@ -5,6 +5,7 @@
     background: #fff url('./ajax-loader.gif') center center no-repeat;
 }
 
+
 /* Icons */
 @font-face
 {
@@ -79,13 +80,26 @@
 
 .slick-prev
 {
-    left: -25px;
+    left: -25px;  
 }
 [dir='rtl'] .slick-prev
 {
     right: -25px;
     left: auto;
 }
+
+@media only screen and (max-width: 768px) {
+    .slick-prev
+    {
+        left: 0px;  
+    }
+    [dir='rtl'] .slick-prev
+    {
+        right: 0px;
+        left: auto;
+    }
+}
+
 .slick-prev:before
 {
 	content: url(../images/arrow-l.svg);
@@ -105,6 +119,17 @@
 {
     right: auto;
     left: -25px;
+}
+@media only screen and (max-width: 768px) {
+    .slick-next
+    {
+        right: 0px;
+    }
+    [dir='rtl'] .slick-next
+    {
+        right: auto;
+        left: 0px;
+    }
 }
 .slick-next:before
 {
