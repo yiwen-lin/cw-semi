@@ -230,12 +230,12 @@ a {
 			top: 70%;
 			width: 100%;
 			&::before {
-				left: 15px;
+				left: 20px;
 				top: 18px;
 				width: 30px;
 			}
 			&::after {
-				right: 15px;
+				right: 20px;
 				top: 18px;
 				width: 30px;
 			}
@@ -641,10 +641,12 @@ a {
 			border-radius: 12px;
 			display: inline-block;
 			color: #fff;
+			font-size: 18px;
 			padding:10px 60px;
 			letter-spacing: 3px;
 			text-indent: 3px;
 			position: relative;
+			transition:.3s;
 			&::after {
 				display: inline-block;
 				content: url(../images/point.svg);
@@ -652,6 +654,10 @@ a {
 				position: absolute;
 				right: -20px;
 				top:0px;
+			}
+			&:hover {
+				transition:.3s;
+				background-color: #d60c18;
 			}
 		}
 	}
