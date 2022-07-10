@@ -151,7 +151,8 @@ a {
 		height: 100vh;
 		background: #292f39 url('../images/kv.jpg') no-repeat center center;
 		background-size: 100%;
-		animation: grow infinite alternate ease-in-out 8s;
+		animation: grow infinite alternate ease-in 7s;
+		animation-direction: normal;
 	}
 
 
@@ -175,11 +176,11 @@ a {
 		}
 		@keyframes grow {
 			0% {
-				transform: scale(1.3);
+				transform: scale(1);
 			}
 	
 			100% {
-				transform: scale(1.6);
+				transform: scale(1.3);
 	
 			}
 		}
@@ -227,23 +228,23 @@ a {
 			text-shadow: 0 0 15px rgb(0,0,0 / 60%);
 		}
 		@include mobile {
-			top: 70%;
+			top: 73%;
 			width: 100%;
 			&::before {
-				left: 20px;
-				top: 18px;
-				width: 30px;
+				left: 30px;
+				top: 13px;
+				width: 28px;
 			}
 			&::after {
-				right: 20px;
-				top: 18px;
-				width: 30px;
+				right: 30px;
+				top: 13px;
+				width: 28px;
 			}
 			span {
 				display: block;
 			}
 			h1 {
-				font-size: 55px;
+				font-size: 52px;
 				display: block;
 				font-weight: 500;
 				line-height: 1.2;
@@ -652,8 +653,8 @@ a {
 				content: url(../images/point.svg);
 				width: 50px;
 				position: absolute;
-				right: -20px;
-				top:0px;
+				right: -10px;
+				top: 15px;
 			}
 			&:hover {
 				transition:.3s;
