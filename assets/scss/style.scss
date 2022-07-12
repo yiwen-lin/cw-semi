@@ -39,8 +39,6 @@ body {
 	position: relative;
 }
 
-
-
 section {
 	padding: 120px 0;
 
@@ -138,6 +136,10 @@ h6 {
 
 a {
 	transition: .3s;
+}
+
+img {
+	width: 100%;
 }
 
 .mb-60 {
@@ -339,7 +341,10 @@ a {
 		color: $color-primary;
 	}
 	.text-wrap {
-		
+		margin-bottom: 50px;
+		.align-center {
+			align-items: center;
+		}
 		.item-center {
 			// display: flex;
 			// align-items: center;
@@ -351,9 +356,9 @@ a {
 			}
 		}
 	}
-	.text-wrap+.text-wrap {
-		margin-top: 60px;
-	}
+	// .text-wrap+.text-wrap {
+	// 	margin-top: 60px;
+	// }
 	// .chart {
 	// 	position: relative;
 	// 	margin: 50px auto;
