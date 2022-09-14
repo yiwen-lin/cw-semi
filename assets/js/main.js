@@ -47,3 +47,13 @@ $(".accordion__group .accordion__item__header").on("click", function() {
   $(this).children(".icon-minus").toggleClass("active");
   $(this).siblings(".accordion__item__panel").slideToggle();
 });
+
+//ga
+$(document).click(function() {
+  dataLayer.push({
+    'eventCategory':'cwdigiteam',  //事件類別
+    'eventAction':'2022semiAction',  //動作
+    'eventLabel':'',  //活動標籤
+    'event':'sendMyEvent' //不可以動
+  });
+});
